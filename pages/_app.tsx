@@ -1,9 +1,12 @@
 import type { AppProps } from "next/app";
-import "../styles/globals.css";
-import Navbar from "@/src/components/Navbar";
+import "../styles/globals.css"; // Ensure correct import path
+import Navbar from "../src/components/Navbar"; // Fix incorrect path
 import { AnimatePresence, motion } from "framer-motion";
+import { useRouter } from "next/router"; // Import useRouter
 
-function MyApp({ Component, pageProps, router }: AppProps & { router: any }) {
+function MyApp({ Component, pageProps }: AppProps) {
+  const router = useRouter(); // Fix router issue
+
   return (
     <>
       <Navbar />

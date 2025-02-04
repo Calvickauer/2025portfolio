@@ -6,7 +6,7 @@ body {
   background-color: #111;
   color: #fff;
   font-family: sans-serif;
-  padding: 20px;
+  padding-top: 80px; /* Fixes navbar overlap */
 }
 
 h1 {
