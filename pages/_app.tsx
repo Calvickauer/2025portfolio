@@ -1,17 +1,15 @@
 import type { AppProps } from "next/app";
-import "../styles/globals.css"; // Ensure correct import path
-import Navbar from "../src/components/Navbar"; // Fix incorrect path
+import "../styles/globals.css";
+import Navbar from "@/src/components/Navbar";
 import { AnimatePresence, motion } from "framer-motion";
-import { useRouter } from "next/router"; // Import useRouter
+import Chatbot from "@/src/components/Chatbot";
 
-function MyApp({ Component, pageProps }: AppProps) {
-  const router = useRouter(); // Fix router issue
-
+function MyApp({ Component, pageProps, router }: AppProps & { router: any }) {
   return (
     <>
       <Navbar />
       <AnimatePresence mode="wait">
-        <motion.div 
+        <motion.div
           key={router.route}
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -21,6 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           <Component {...pageProps} />
         </motion.div>
       </AnimatePresence>
+      <Chatbot />
     </>
   );
 }

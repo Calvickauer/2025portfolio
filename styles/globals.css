@@ -23,3 +23,25 @@ a {
 nav a {
   transition: color 0.3s ease;
 }
+
+.custom-shape-divider-bottom-1738726251 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1738726251 svg {
+  position: relative;
+  display: block;
+  width: calc(194% + 1.3px);
+  height: 171px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1738726251 .shape-fill {
+  fill: #1DD9FF;
+}
